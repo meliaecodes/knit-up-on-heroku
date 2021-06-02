@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://p.trellocdn.com/power-up.min.css">
+    <style>
+      select { height: 30px; }
+    </style>
+    <script src="https://p.trellocdn.com/power-up.min.js"></script>
+  </head>
+  <body>
+    <form id="pattern">
+      <div>
+        <p>Pattern Name:</p>
+        <input id="patternName" type="text">
+      </div>
+      <div>
+        <p>Pattern Link:</p>
+        <input id="patternLink" type="text">
+      </div>
+      <div>
+      <label for="setSize">Size made:</label>
+      <select name="size" id="setSize">
+        <option value="NA">Not Applicable</option>
+        <option value="XXS">Extra Extra Small</option>
+        <option value="XS">Extra Small</option>
+        <option value="S">Small</option>
+        <option value="M">Medium</option>
+        <option value="L">Large</option>
+        <option value="XL">Extra Large</option>
+        <option value="XXL">Extra Extra Large</option>
+        <option value="XXXL">Extra Extra Extra Large</option>
+      </select>
+      </div>
+      <button type="submit" class="mod-primary">Save</button>
+    </form>
+    <script src="./js/patternDetails.js"></script>
+  </body>
+</html>
