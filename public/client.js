@@ -41,6 +41,12 @@ TrelloPowerUp.initialize({
                     case "Complete":
                       t.set('card','shared','progress', 100);
                       break
+                    case "Finished":
+                      t.set('card','shared','progress', 100);
+                      break
+                    case "Done":
+                      t.set('card','shared','progress', 100);
+                      break
                     default:
                       t.set('card','shared','progress', 0);
                   }
