@@ -36,7 +36,7 @@ TrelloPowerUp.initialize({
             .then(function(list){
                 return t.get('card','shared')
                     .then(function(data) {
-                        
+
                         var cardBadge = []
 
                         if(typeof data.progress !== 'undefined'){
