@@ -86,6 +86,17 @@ TrelloPowerUp.initialize({
               text: cardData.patternName,
             })
           };
+          if (typeof cardData.yarn !== 'undefined'){
+            cardBadge.push({title: "Yarn", text: cardData.yarn,})
+          }
+
+          if(typeof cardData.colour !== 'undefined') {
+            cardBadge.push({title: "Colour", text: cardData.colour,})
+          }
+
+          if(typeof cardData.weight !== 'undefined') {
+            cardBadge.push({title: "Weight", text: cardData.weight,})
+          }
           return cardBadge;
         });
   },
