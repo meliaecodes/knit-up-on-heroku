@@ -39,17 +39,19 @@ TrelloPowerUp.initialize({
 
                         var cardBadge = []
 
-                        if(typeof data.progress !== 'undefined'){
+                        if(typeof data.progress !== 'undefined') {
                             cardBadge.push({
                                 icon: 'https://cdn.glitch.com/c69415fd-f70e-4e03-b43b-98b8960cd616%2Frocket-ship-grey.png?1496162964717',
                                 text: data.progress + '%'
                             })
                         }
                         if(typeof data.size !== 'undefined'){
-                            cardBadge.push({
-                                icon: 'https://cdn.glitch.com/c69415fd-f70e-4e03-b43b-98b8960cd616%2Frocket-ship-grey.png?1496162964717',
-                                text: data.size
-                            })
+                            if(data.size !== "") {
+                                cardBadge.push({
+                                    icon: 'https://cdn.glitch.com/c69415fd-f70e-4e03-b43b-98b8960cd616%2Frocket-ship-grey.png?1496162964717',
+                                    text: data.size
+                                })
+                            }
                         }
                         return cardBadge;
                     });
