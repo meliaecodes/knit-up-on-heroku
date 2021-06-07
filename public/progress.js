@@ -2,6 +2,12 @@
 
 var t = TrelloPowerUp.iframe();
 
+function checkData(details){
+  if(typeof details === 'undefined')
+    return "";
+  else return details;
+}
+
 window.progress.addEventListener('input', function () {
   window.progressValue.innerHTML = window.progressEstimate.value + "%";
   return t.set('card','shared','progress', window.progressEstimate.value)
