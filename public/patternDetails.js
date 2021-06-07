@@ -6,6 +6,7 @@ window.pattern.addEventListener('submit', function(event){
   event.preventDefault();
   t.set('card', 'shared', 'patternName', window.patternName.value);
   t.set('card', 'shared', 'patternLink', window.patternLink.value);
+  t.set('card', 'shared', 'isRavLink', window.isRavLink.value);
   return t.set('card', 'shared', 'size', window.setSize.value)
   .then(function(){
     t.closePopup();
@@ -18,6 +19,7 @@ t.render(function(){
     window.setSize.value = data.size;
     window.patternName.value = data.patternName;
     window.patternLink.value = data.patternLink;
+    window.isRavLink.value = data.isRavLink;
   })
   .then(function(){
     t.sizeTo('#size').done();

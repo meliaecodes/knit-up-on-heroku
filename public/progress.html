@@ -3,13 +3,33 @@
 <head>
 <link rel="stylesheet" href="https://p.trellocdn.com/power-up.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<style>
+  table, tr, td {
+    border-style: hidden;
+  }
+  #progresstable {
+    border-collapse: collapse;
+    width: min-content;
+  }
+  #progressValue {
+    margin-top: 5px;
+    text-align: center;
+  }
+</style>
 <script src="https://p.trellocdn.com/power-up.min.js"></script>
 </head>
+
 <body>
-  <div id="progress" class="slidecontainer">
-  <p>Progress:</p>
-  <input id="progressEstimate" type="range" min="1" max="100">
+<div id="progress" class="slidecontainer">
+  <table id="progresstable">
+    <tr>
+      <td>Progress:</td>
+    </tr>
+    <tr>
+      <td><input id="progressEstimate" type="range" min="1" max="100"></td>
+      <td><div id="progressValue"></div></td>
+    </tr>
+  </table>
 </div>
 <script src="./progress.js"></script>
 </body>
