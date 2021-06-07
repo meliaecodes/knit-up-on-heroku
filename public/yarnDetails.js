@@ -2,6 +2,12 @@
 
 var t = TrelloPowerUp.iframe();
 
+function checkData(details){
+  if(typeof details === 'undefined')
+    return "";
+  else return details;
+}
+
 window.yarnDetails.addEventListener('submit', function(event) {
   event.preventDefault();
   console.log(window.yarn.value);
@@ -16,8 +22,8 @@ window.yarnDetails.addEventListener('submit', function(event) {
 t.render(function(){
   return t.get('card', 'shared')
   .then(function(data){
-    window.colour.value = data.colour;
-    window.weight.value = data.weight;
-    window.yarn.value = data.yarn;
+    window.colour.value = checkData(data.colour);
+    window.weight.value = checkData(data.weight);
+    window.yarn.value = checkData(data.yarn);
   })
 });
