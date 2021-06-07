@@ -36,18 +36,7 @@ TrelloPowerUp.initialize({
             .then(function(list){
                 return t.get('card','shared')
                     .then(function(data) {
-
-                        if(list.name === 'Announcements'){
-                            console.log("removing size and progress data for " + list.name);
-                            t.remove('card','shared','size');
-                            t.remove('card','shared','progress');
-                        }
-                        if(list.name === 'Welcome'){
-                            console.log("removing size and progress data for " + list.name);
-                            t.remove('card','shared','size');
-                            t.remove('card','shared','progress');
-                        }
-
+                        
                         var cardBadge = []
 
                         if(typeof data.progress !== 'undefined'){
